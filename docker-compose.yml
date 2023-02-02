@@ -1,0 +1,14 @@
+version: "3"
+services:
+    #PHP Service
+    codepractice-be:
+        build: .
+        container_name: codepractice-be
+        restart: always
+        tty: true
+        environment:
+            SERVICE_NAME: codepractice-be
+            SERVICE_TAGS: dev
+        working_dir: /var/www
+        volumes:
+            - ./:/var/www
